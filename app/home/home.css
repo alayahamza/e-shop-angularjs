@@ -49,3 +49,21 @@
 .category-container {
     margin-top: 3%;
 }
+
+
+.product-card{
+    margin: 1em;
+}
+.product-price{
+    float: right;
+    margin-right: 1%;
+    font-size: x-large;
+}
+.product-details-link:hover{
+    background-color: azure;
+    color: #555555;
+}
+
+.product-description{
+    padding: 1%;
+}
