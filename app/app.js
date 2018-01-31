@@ -5,8 +5,12 @@ angular.module('myApp', [
     'ngRoute',
     'myApp.filter',
     'myApp.home',
-    'myApp.view2',
-    'myApp.version'
+    'myApp.product',
+    'myApp.cart',
+    'myApp.version',
+    'ngAnimate',
+    'ngSanitize',
+    'ui.bootstrap'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 

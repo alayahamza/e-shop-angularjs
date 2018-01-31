@@ -1,47 +1,51 @@
-<div class="row main-content" ng-controller="HomeCtrl">
-    <div class="col-md-3">
-        <div class="list-group category-container">
-            <form class="form-horizontal">
-                <input class="form-control" type="search" placeholder="Search products" aria-label="Search"
-                       ng-model="searchText" name="search-text" autofocus>
-                <br>
-                <div class="text-center category-container-spinner" ng-show="HomeCtrl.displayCategoryContainerSpinner">
-                    <i
-                            class="fa fa-spinner fa-spin"></i></div>
+<div class="main-content col-md-12" >
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group category-container">
+                <form class="form-horizontal">
+                    <input class="form-control" type="search" placeholder="Search products" aria-label="Search"
+                           ng-model="searchText" name="search-text" autofocus>
+                    <br>
+                    <div class="text-center category-container-spinner"
+                         ng-show="displayCategoryContainerSpinner">
+                        <i
+                                class="fa fa-spinner fa-spin"></i></div>
 
-                <li ng-repeat=" category in categories" ng-if="categories"
-                    ng-class="currentCategory === category  ? 'category-name list-group-item list-group-item-action justify-content-between active' :'category-name list-group-item list-group-item-action justify-content-between'"
-                    ng-click="updateCategory(category)">
-                    <span class="badge badge-default badge-pill badge-category-count">{{category.products}}</span>
-                    <span><b>{{category.name}}</b></span>
-                    <span class="category-arrow"><i class="fa fa-chevron-right"></i></span>
-                </li>
+                    <li ng-repeat=" category in categories" ng-if="categories"
+                        ng-class="currentCategory === category  ? 'category-name list-group-item list-group-item-action justify-content-between active' :'category-name list-group-item list-group-item-action justify-content-between'"
+                        ng-click="updateCategory(category)">
+                        <span class="badge badge-default badge-pill badge-category-count">{{category.products}}</span>
+                        <span><b>{{category.name}}</b></span>
+                        <span class="category-arrow"><i class="fa fa-chevron-right"></i></span>
+                    </li>
 
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="col-md-9">
-        <div class="text-center product-container-spinner" ng-show="displayProductContainerSpinner"><i
-                class="fa fa fa-spinner fa-spin"></i></div>
-        <div class="row cards-container" id="cards-container" *ngIf="currentCategory">
-            <div class="product-card card"
-                 ng-repeat=" product in products | filterCategoryAndTitleAndDescription: searchText:currentCategory.id">
-                <img class="card-img-top" src="./assets/holder-318-180.svg" alt="Card image cap">
-                <div class="card-block">
-                    <p class="card-title text-center"><b>{{product.title}}</b></p>
-                    <div class="text-center">
-                        <ngb-rating [(rate)]="product.rate" [readonly]="true"></ngb-rating>
+        <div class="col-md-9">
+            <div class="text-center product-container-spinner" ng-show="displayProductContainerSpinner"><i
+                    class="fa fa fa-spinner fa-spin"></i></div>
+            <div class="row cards-container" id="cards-container" *ngIf="currentCategory">
+                <div class="product-card card"
+                     ng-repeat=" product in products | filterCategoryAndTitleAndDescription: searchText:currentCategory.id">
+                    <img class="card-img-top" src="./assets/holder-318-180.svg" alt="Card image cap">
+                    <div class="card-block">
+                        <p class="card-title text-center"><b>{{product.title}}</b></p>
+                        <div class="text-center">
+                            <ngb-rating [(rate)]="product.rate" [readonly]="true"></ngb-rating>
+                        </div>
+                        <p class="card-text product-description">{{product.description}}</p>
+                        <a href="#!/product/{{product.id}}"
+                           class="btn btn-primary text-center product-details-link"><i
+                                class="fa fa-external-link" aria-hidden="true"></i></a>
+                        <span class="product-price">{{product.price}} <i class="fa fa-usd"
+                                                                         aria-hidden="true"></i></span>
                     </div>
-                    <p class="card-text product-description">{{product.description}}</p>
-                    <a routerLink="/product-details/{{product.id}}"
-                       class="btn btn-primary text-center product-details-link"><i
-                            class="fa fa-external-link" aria-hidden="true"></i></a>
-                    <span class="product-price">{{product.price}} <i class="fa fa-usd" aria-hidden="true"></i></span>
                 </div>
+
             </div>
 
         </div>
-
     </div>
 </div>
 

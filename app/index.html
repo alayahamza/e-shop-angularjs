@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
@@ -68,9 +69,11 @@
                     </ul>
                 </div>
                 <form class="form-inline my-2 my-lg-0">
-                    <i routerLink="/cart" class="home-shopping-cart fa fa-shopping-cart fa-2x" aria-hidden="true"
-                       placement="bottom"
-                       ngbTooltip="My cart"></i>
+                    <a href="#!/cart">
+                        <i class="home-shopping-cart fa fa-shopping-cart fa-2x" aria-hidden="true"
+                           placement="bottom"
+                           ngbTooltip="My cart"></i>
+                    </a>
                 </form>
             </nav>
             <div class="row">
@@ -89,20 +92,26 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="home/home.css">
+<link rel="stylesheet" href="product/product.css">
+<link rel="stylesheet" href="cart/cart.css">
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="app.js"></script>
 <script src="filter/filter.js"></script>
 <script src="service/category.service.js"></script>
 <script src="service/product.service.js"></script>
+<script src="product/product.js"></script>
+<script src="cart/cart.js"></script>
 <script src="home/home.js"></script>
-<script src="view2/view2.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

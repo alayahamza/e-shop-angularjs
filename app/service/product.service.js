@@ -12,6 +12,16 @@ angular.module("myApp.productServices", ["ngResource"])
                         });
 
                     return deferred.promise;
+                },
+                getProductById: function (productId) {
+                    var deferred = $q.defer();
+                    var promise = $http.get(url + '/products/' + productId)
+                        .then(function (data) {
+
+                            deferred.resolve(data);
+                        });
+
+                    return deferred.promise;
                 }
             }
         });

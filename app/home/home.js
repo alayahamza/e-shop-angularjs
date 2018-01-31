@@ -1,8 +1,6 @@
 'use strict';
 
-angular.module('myApp.home', ['ngRoute',
-    'myApp.categoryServices',
-    'myApp.productServices'])
+angular.module('myApp.home', ['ngRoute', 'myApp.categoryServices', 'myApp.productServices'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/home', {
@@ -12,6 +10,7 @@ angular.module('myApp.home', ['ngRoute',
     }])
 
     .controller('HomeCtrl', ['categoryService', 'productService', '$scope', function (categoryService, productService, $scope) {
+
         $scope.currentCategory;
         $scope.categories = [];
         $scope.products = [];
