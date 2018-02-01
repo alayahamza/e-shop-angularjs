@@ -9,8 +9,7 @@ angular.module('myApp', [
     'myApp.cart',
     'myApp.version',
     'ngAnimate',
-    'ngSanitize',
-    'ui.bootstrap'
+    'ngSanitize'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
 

@@ -24,3 +24,7 @@
 .table-details-column-val {
     font-family: cursive;
 }
+
+.alert-danger, .alert-success {
+    text-align: center;
+}
