@@ -109,5 +109,5 @@ gulp.task('copyAllNpmDependencies', function () {
     gulp.src(gnf(true), {base: './'}).pipe(gulp.dest('dist/'));
 });
 
-gulp.task('build', gulpSequence(['clean'], ['copyAllNpmDependencies', 'html', 'css', 'js', 'img']));
+gulp.task('build', gulpSequence(['clean'], ['html', 'css', 'js', 'img']));
 gulp.task('serve', gulpSequence(['build'], 'connect'));
