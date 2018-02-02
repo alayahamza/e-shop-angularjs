@@ -28,7 +28,7 @@
             <div class="row cards-container" id="cards-container" *ngIf="currentCategory">
                 <div class="product-card card"
                      ng-repeat=" product in products | filterCategoryAndTitleAndDescription: searchText:currentCategory.id">
-                    <img class="card-img-top" src="./img/holder-318-180.svg" alt="Card image cap">
+                    <img class="card-img-top" src="img/holder-318-180.svg" alt="Card image cap">
                     <div class="card-block">
                         <p class="card-title text-center"><b>{{product.title}}</b></p>
                         <div class="text-center">
