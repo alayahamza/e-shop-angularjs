@@ -1,0 +1,30 @@
+.product-details-container {
+    margin-top: 3%;
+    height: 80vh;
+}
+
+.product-details-img {
+    width: 100%;
+}
+
+.product-price {
+    float: right;
+    margin-right: 1%;
+    font-size: x-large;
+}
+
+.fa:hover {
+    cursor: pointer;
+}
+
+.product-details-table {
+    width: 100%;
+}
+
+.table-details-column-val {
+    font-family: cursive;
+}
+
+.alert-danger, .alert-success {
+    text-align: center;
+}
