@@ -13,7 +13,8 @@ angular.module('myApp.cart', ['ngRoute'])
         $scope.minNumCartProduct = 0;
         $scope.maxNumCartProduct = 10;
         $scope.cart = JSON.parse($window.sessionStorage.getItem('cart'));
-        console.log($scope.cart);
+        
+        
         if ($scope.cart === null || $scope.cart === undefined) {
             $scope.cart = {};
             $scope.cart.products = [];
